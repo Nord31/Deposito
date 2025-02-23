@@ -1,4 +1,7 @@
 package cuentas;
+/**
+ * Clase diseñada como simulacion de una cuenta de banco
+ */
 public class CCuenta {
 
 
@@ -19,57 +22,73 @@ public class CCuenta {
     }    
     /**
 	 * Devuelve el nombre
+	 * @return El nombre del titular de la cuenta.
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 	/**
 	 * Método para obtener el nombre y almacenarlo en la variable nombre
+	 * @param nombre El nombre del titular de la cuenta.
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	/**
 	 * Devuelve cuenta que en este caso es una variable que contiene una cadena de texto
+	 * @return El número de cuenta.
 	 */
 	public String getCuenta() {
 		return cuenta;
 	}
 	/**
 	 * Método para obtener el número de cuenta y almacenarlo en la variable cuenta
+	 * @param cuenta El número de cuenta.
 	 */
 	public void setCuenta(String cuenta) {
 		this.cuenta = cuenta;
 	}
 	/**
 	 * Devuelve el saldo
+	 * @return saldo El saldo de la cuenta
 	 */
 	public double getSaldo() {
 		return saldo;
 	}
 	/**
-	 * Método para obtener el saldo y almacenarlo en la variable del mismo nombre
+	 * Método para obtener el saldo
+	 *@param Lo almacena en la variable
 	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 	/**
-	 *  Devuelve el valor de la variable tipoInterés
+	 *  Obtiene el tipo de interés de la cuenta.
+	 *  @return el valor de la variable tipoInterés
 	 */
 	public double getTipoInterés() {
 		return tipoInterés;
 	}
 	/**
-	 * Método para obtener los intereses y almacenarlo en la variable tipoInterés
+	 * Método que establece el tipo de interés de la cuenta
+	 * @param tipoInterés Almacena el valor del tipo de interes
 	 */
 	public void setTipoInterés(double tipoInterés) {
 		this.tipoInterés = tipoInterés;
 	}
-
+/**
+ * Devuelve el estado de la cuenta
+ * @return saldo de la cuenta
+ */
 	public double estado()
     {
         return saldo;
     }
+	/**
+	 * Ingresa la cantidad en cuenta
+	 * @param cantidad cantidad a ingresar
+	 * @throws Exception para valores negativos
+	 */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -77,7 +96,11 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
     }
-
+    /**
+     * Retira una cantidad
+     * @param cantidad cantidad a retirar
+     * @throws Exception si la cantidad es 0 o negativas
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)

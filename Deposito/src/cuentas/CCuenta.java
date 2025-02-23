@@ -1,6 +1,7 @@
 package cuentas;
 /**
  * Clase diseñada como simulacion de una cuenta de banco
+ * @author Omar
  */
 public class CCuenta {
 
